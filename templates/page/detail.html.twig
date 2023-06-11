@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}detail{% endblock %}
+
+{% block body %}
+    <h1>detail</h1>
+
+    <div class="detail">
+
+        <div class="box">
+            <img class="pic" src="{{ asset('build/images/'~photo.path) }}" alt="400" >
+            
+            <div class="description">
+                <ul>
+                    <li>{{ photo.author }}</li>
+                    <li>{{ photo.date }}</li>  
+
+                    {% for elem in photo.tags %}
+                        <li>{{ elem|e }}</li>
+                    {% endfor %}  
+                    
+                    {# todo commenti #}
+                    
+                <ul>
+                    
+                
+            </div>
+        </div>
+
+
+        
+        
+    </div>
+{% endblock %}

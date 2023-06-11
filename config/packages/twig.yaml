@@ -1,0 +1,11 @@
+twig:
+
+    default_path: '%kernel.project_dir%/templates'
+
+    paths:
+        'public/uploads/photo': 'photo'
+        
+
+when@test:
+    twig:
+        strict_variables: true
