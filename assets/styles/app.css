@@ -15,15 +15,15 @@ body {
     align-items: center;
 }
 
-.page>.pic{
-    object-fit: none; 
+.page .pic{
+    object-fit:contain; 
     object-position: center; 
     width: 400px;
     height: 400px;
     margin: 5px;
 }
 
-.page>.pic:hover {
+.page .pic:hover {
     transform: scale(1.05);
     transition: transform .35s ease-in-out;
     -webkit-transition: transform .35s ease-in-out;

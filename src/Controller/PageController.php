@@ -11,10 +11,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class PageController extends AbstractController
 {
     #[Route('/', name: 'app_page')]
-    public function index(): Response
+    public function index(EntityManagerInterface $entityManager): Response
     {
+        $photos = $entityManager->getRepository(Photo::class)->findAll();
+
         return $this->render('page/index.html.twig', [
-            'controller_name' => 'PageController',
+            'controller_name' => 'PageController','photos' => $photos,
         ]);
     }
 

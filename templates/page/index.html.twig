@@ -6,14 +6,16 @@
     <h1>index</h1>
 
     <div class="page">
+        
+        {% for photo in photos %}
+            <div class="box">
+                <a href="{{ asset('post/'~photo.id) }}"><img class="pic" src="{{ asset('build/images/'~photo.path) }}" alt="400" ></a>
+            </div>
+        {% endfor %}
 
-        <div class="box">
-            <img class="pic" src="https://placehold.co/600x400" alt="400" >
-        </div>
+        
 
-        <div class="box">
-            <img class="pic" src="https://placehold.co/600x400" alt="400" >
-        </div>
+        
         
     </div>
 {% endblock %}
