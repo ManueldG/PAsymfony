@@ -36,6 +36,12 @@ body {
     -o-transform: scale(1.05);
 }
 
-.detail>.box {
+.detail .box{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .detail .pic{
     width: 75vw;
-    }
+  }
+

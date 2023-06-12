@@ -8,9 +8,11 @@
     <div class="page">
         
         {% for photo in photos %}
+
             <div class="box">
                 <a href="{{ asset('post/'~photo.id) }}"><img class="pic" src="{{ asset('build/images/'~photo.path) }}" alt="400" ></a>
             </div>
+            
         {% endfor %}        
         
     </div>
